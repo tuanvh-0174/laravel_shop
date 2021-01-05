@@ -1,0 +1,20 @@
+{
+  "name": "laravel_shop",
+  "description": "",
+  "main": "",
+  "authors": [
+    "tuanvh"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/tuanvh-0174/laravel_shop",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "admin-lte": "^3.0.5"
+  }
+}
