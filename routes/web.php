@@ -15,7 +15,7 @@ use App\Http\Controllers\HomeController;
 
 Auth::routes();
 
-//require 'admin.php';
+require 'admin.php';
 
 Route::view('/', 'welcome');
 Route::get('/home', [HomeController::class, 'index'])->name('home');

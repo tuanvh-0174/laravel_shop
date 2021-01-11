@@ -55,6 +55,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="{{ asset("vendor/admin-lte/plugins/bootstrap/js/bootstrap.bundle.min.js") }}"></script>
 <!-- AdminLTE App -->
 <script src="{{ asset("vendor/admin-lte/dist/js/adminlte.min.js") }}"></script>
+<script>
+    var BASE_URL = "{{ url('/') }}";
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+</script>
 @yield('stylesheet')
 </body>
 </html>
