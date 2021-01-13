@@ -1,5 +1,7 @@
 <?php
 use App\Http\Controllers\Admin\LoginController;
+use App\Http\Controllers\Admin\DashboardController;
+
 //'middleware' => 'auth:admin'
 Route::group(['prefix'  =>  'admin', 'namespace' => 'Admin'], function () {
 
@@ -9,9 +11,7 @@ Route::group(['prefix'  =>  'admin', 'namespace' => 'Admin'], function () {
 
     Route::group(['middleware' => ['auth:admin']], function () {
 
-        Route::get('/', function () {
-            return view('admin.dashboard.index');
-        })->name('admin.dashboard.index');
+        Route::get('/', [DashboardController::class, 'index'])->name('admin.dashboard.index');
 
     });
 
